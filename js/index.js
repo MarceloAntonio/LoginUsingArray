@@ -2,13 +2,11 @@
 let bd = []
 let o = true
 
-
 while (o) {
   const chamado = Number(
     prompt(`digite 
-          1- para ir para a pagina de login
-          2- para ir fazer o login
-          3- sair
+          1- para fazer login
+          2- para criar um usuario
   `)
   )
 
@@ -24,7 +22,9 @@ while (o) {
       (user === bd[4] && senha === bd[5])
     ) {
       o = false
-      alert("login foi concluido com sucesso bem vindo ",bd[0])
+      alert(
+        "login foi concluido com sucesso, seja bem vindo(a) a lista de frutas"
+      )
       window.location.href = "../html/logado.html"
     } else {
       alert("login invalido")
@@ -33,16 +33,12 @@ while (o) {
 
   if (chamado === 2) {
     let user = prompt("digite seu usuario")
-    
+
     let senha = prompt("digite sua senha")
 
     user
     senha
     bd.push(user, senha)
     chamado
-  }
-
-  if (chamado === 3) {
-    o = false
   }
 }
