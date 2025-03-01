@@ -1,7 +1,12 @@
+//array para guardar os itens 
 let lista = []
 
-let o = true
-while (o) {
+//variavel trigger para ativação e desligamento do loop
+let trigger = true
+
+//loop chamando um prompt
+while (trigger) {
+  //varialvel chamando um prompt
   const fruta = Number(
     prompt(
       `crie sua lista de frutas aqui! 
@@ -15,6 +20,7 @@ while (o) {
   )
 
   if (fruta === 1) {
+    
     const qual = prompt("qual fruta adicionar?")
     qual
     lista.push(qual)
@@ -39,7 +45,7 @@ while (o) {
     lista = []
   }
   if (fruta === 5) {
-    o = false
+    trigger = false
   }
 }
 
